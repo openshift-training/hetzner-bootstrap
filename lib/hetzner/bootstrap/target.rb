@@ -26,7 +26,7 @@ module Hetzner
         @retries             = 0
         @bootstrap_cmd       = 'export TERM=xterm; /root/.oldroot/nfs/install/installimage -a -c /tmp/template'
         @login               = 'root'
-        @post_install_remote = ''
+        @post_install_remote = 'yum install python-rhsm-certificates yum-utils pyOpenSSL python-cryptography python-lxml NetworkManager -y'
 
         @template = Template.new options.delete(:template)
 
