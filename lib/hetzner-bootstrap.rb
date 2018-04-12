@@ -27,7 +27,8 @@ module Hetzner
                         copy_ssh_keys
                         update_local_known_hosts
                         post_install
-                        post_install_remote)
+                        post_install_remote
+                        reboot)
       @api         = options[:api]
       @logger      = options[:logger] || Logger.new(STDOUT)
     end
